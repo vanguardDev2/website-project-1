@@ -1,7 +1,62 @@
-body{
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    color: aliceblue;
+:root{
+    --primer-color: #161719;
+    --segundo-color: #fff;
+}
+
+body{
+    background-color: var(--primer-color);
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.container__items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__items{
+    display: flex;
+    gap: 2rem;
+}
+
+.item{
+    text-decoration: none;
+    color: var(--segundo-color);
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background-color: white !important;
+}
+
+.hamburger{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .hamburger{
+        
+    }
 }
