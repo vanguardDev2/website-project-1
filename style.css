@@ -10,6 +10,8 @@
 :root{
     --primer-color: #161719;
     --segundo-color: #fff;
+    --tercer-color:#1E1E20;
+    --cuarto-color:#CC680B;
 }
 
 body{
@@ -21,6 +23,8 @@ body{
     max-width: 1200px;
     margin: auto;
 }
+
+/* MENU ESTILOS */
 
 .menu{
     display: flex;
@@ -45,7 +49,7 @@ body{
 .item::after{
     content: "";
     display: block;
-    background: #fff200;
+    background: var(--cuarto-color);
     width: 90%;
     margin-top: 3px;
     height: 3px;
@@ -64,6 +68,112 @@ body{
 .hamburger{
     display: none;
     padding: 0;
+}
+
+
+/* HERO ESTILOS */
+.hero{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    padding: 4rem 0;
+}
+
+.hero__title{
+    color: var(--segundo-color);
+    font-size: 2.5rem;
+}
+
+.hero__parrafo{
+    font-size: 16px;
+    color: var(--segundo-color);
+    line-height: 1.7;
+    padding: 2rem 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn{
+    background-color: var(--cuarto-color);
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 2.5rem;
+    color: var(--segundo-color);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons .btn:last-child{
+    background: transparent;
+    border: 1px solid var(--cuarto-color);
+}
+
+.hero__img img{
+    width: 100%;
+    height: 500px;
+}
+
+/* CARDAS ESTILOS Y TEXTO BOX ESTILOS */
+.seccion-texto-card {
+    background-color: var(--tercer-color);
+    width: 100%;
+}
+
+.cards,
+.texto-seccion-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+}
+
+.texto-seccion-card{
+    padding-top: 3rem;
+}
+
+.cards{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.texto-box{
+    text-align: center;
+}
+
+.titulo-box{
+    color: var(--segundo-color);
+    border-bottom: 3px solid var(--primer-color);
+    padding-bottom: 1rem;
+}
+
+.parrafo-box{
+    padding-top: 1.5rem;
+    line-height: 1.7;
+    color: var(--segundo-color);
+}
+
+.card{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}
+
+.texto-card{
+    background-color: #0202028a;
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+    bottom: 0;
+    color: var(--segundo-color);
 }
 
 @media (max-width:768px) {
@@ -94,5 +204,17 @@ body{
 
     }
 
+    .hero__title,
+    .hero__parrafo{
+        text-align: center;
+    }
+
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    .hero__parrafo{
+        font-size: 14px;
+    }
 
 }
