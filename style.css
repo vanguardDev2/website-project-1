@@ -14,9 +14,33 @@
     --cuarto-color:#CC680B;
 }
 
-body{
-    background-color: var(--primer-color);
-}
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 1200px) {
+    body {
+      background-image: url('assets/img/background\ poco\ tamaño.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
+  /* Estilos para pantallas medianas */
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    body {
+      background-image: url('assets/img/background\ poco\ tamaño.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media screen and (max-width: 767px) {
+    body {
+      background-image: url('assets/img/background\ poco\ tamaño.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
 
 .contenedor{
     width: 90%;
@@ -216,5 +240,29 @@ body{
     .hero__parrafo{
         font-size: 14px;
     }
+    
 
+     /* Agregar esta regla para la vista previa */
+     .preview {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        max-width: 90%;
+        max-height: 90%;
+        overflow: auto;
+        display: none;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    /* Agregar esta regla para la animación */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 }
