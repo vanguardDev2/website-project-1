@@ -33,3 +33,22 @@ cerrarModal.addEventListener("click", () => {
     containerImage.classList.toggle("move")
     imageContainer.classList.toggle("show")
 })
+
+
+
+//MOSTRAR IMAGENES CUANDO SCROLEES A SU SECCION
+const mostrarImagenes = document.querySelector(".hidden")
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        return entry.isIntersecting ? entry.target.classList.add("mostrar") : entry.target.classList.remove("mostrar")
+    })
+},{threshold:0.2})
+
+observer.observe(mostrarImagenes)
+
+
+/* MENU CIRCULAR */
+const iconMenu = document.querySelector(".icon-menu-circular")
+
+iconMenu.addEventListener("click", () => iconMenu.classList.toggle("active"))

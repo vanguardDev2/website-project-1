@@ -71,6 +71,14 @@ body{
     padding: 0;
 }
 
+.logo{
+    width: 100px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
 
 /* HERO ESTILOS */
 .hero{
@@ -179,7 +187,18 @@ body{
     color: var(--segundo-color);
 }
 
+.hidden{
+    transform: scale(0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s ease-out;
+}
 
+.mostrar{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
 
 /*LIGHT BOX ESTILOS*/
 .container-img{
@@ -227,6 +246,10 @@ i{
     font-size: 30px;
     cursor: pointer;
 }
+
+
+
+
 
 @media (max-width:768px) {
     body{
