@@ -120,7 +120,7 @@ body{
 
 .buttons .btn:last-child{
     background: transparent;
-    border: 1px solid var(--cuarto-color);
+    border: 2px solid var(--cuarto-color);
 }
 
 .hero__img img{
